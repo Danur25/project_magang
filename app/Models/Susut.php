@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Susut extends Model
 {
     use HasFactory;
-
-    protected $table = 'susutpln';
-protected $fillable = ['tanggal', 'jumlah_susut'];
-
+    protected $fillable = [
+        'ulp',
+        'up3',
+        'tanggal',
+        'jumlah_susut'
+    ];
+    
 }

@@ -8,17 +8,17 @@ return new class extends Migration {
     /**
      * Run the migrations.
      */
-    public function up()
-    {
-        Schema::create('susuts', function (Blueprint $table) {
-            $table->id();
-            $table->date('tanggal');
-            $table->integer('tahun');
-            $table->integer('bulan');
-            $table->decimal('jumlah_susut', 8, 2);
-            $table->timestamps();
-        });
-    }
+    // database/migrations/xxxx_xx_xx_create_susuts_table.php
+public function up()
+{
+    Schema::create('susuts', function (Blueprint $table) {
+        $table->id();
+        $table->string('ulp');
+        $table->date('tanggal');
+        $table->decimal('jumlah_susut', 8, 2);
+        $table->timestamps();
+    });
+}
     
 
     /**

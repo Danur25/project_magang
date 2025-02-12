@@ -10,14 +10,16 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up()
-{
-    Schema::create('susutpln', function (Blueprint $table) {
-        $table->id();
-        $table->date('tanggal');
-        $table->decimal('jumlah_susut', 10, 2);
-        $table->timestamps();
-    });
-}
+    {
+        Schema::create('susuts', function (Blueprint $table) {
+            $table->id();
+            $table->string('ulp');
+            $table->date('tanggal');
+            $table->decimal('jumlah_susut', 8, 2);
+            $table->integer('tahun')->nullable(); // Jika kolom opsional
+            $table->timestamps();
+        });
+    }
 
 
     /**
